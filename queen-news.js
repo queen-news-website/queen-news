@@ -3,7 +3,7 @@ var labels=[];
 var grotitle = document.createElement("h1");
 grotitle.style.textAlign="center";
 grotitle.textContent="sitemap";
-document.getElementById("sitemapbyMH").appendChild(grotitle);
+document.getElementById("sitemapby-queen-news").appendChild(grotitle);
 function GetLabels(e) {
     for (let i = 0; i < e.feed.category.length; i++) {
         labels.push(e.feed.category[i].term);
@@ -14,12 +14,12 @@ function GetLabels(e) {
         titlemh.innerHTML=e.feed.category[i].term;
         var listul = document.createElement("ul");
         listul.className="MH" + i;
-        document.getElementById("sitemapbyMH").appendChild(titlemh);
-        document.getElementById("sitemapbyMH").appendChild(listul);
+        document.getElementById("sitemapby-queen-news").appendChild(titlemh);
+        document.getElementById("sitemapby-queen-news").appendChild(listul);
     }
     var script =document.createElement("script")
     script.src="/feeds/posts/default/?start-index=1&max-results=150&orderby=published&alt=json-in-script&callback=GetSitemap";
-    document.getElementById("sitemapbyMH").appendChild(script);
+    document.getElementById("sitemapby-queen-news").appendChild(script);
 }
 var num=0;
 var goku = true;
@@ -62,9 +62,9 @@ num+=150;
     if (allposts > num){
         var script =document.createElement("script")
         script.src="/feeds/posts/default/?start-index="+num+"&max-results=150&orderby=published&alt=json-in-script&callback=GetSitemap";
-        document.getElementById("sitemapbyMH").appendChild(script);
+        document.getElementById("sitemapby-queen-news").appendChild(script);
     }
 }
     var scripto =document.createElement("script")
     scripto.src="/feeds/posts/default/?start-index=1&max-results=150&orderby=published&alt=json-in-script&callback=GetLabels";
-    document.getElementById("sitemapbyMH").appendChild(scripto);
+    document.getElementById("sitemapby-queen-news").appendChild(scripto);
