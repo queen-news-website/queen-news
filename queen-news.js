@@ -2,7 +2,7 @@
 var labels=[];
 var grotitle = document.createElement("h1");
 grotitle.style.textAlign="center";
-grotitle.textContent="sitemap";
+grotitle.textContent="Blogger index";
 document.getElementById("sitemapby-queen-news").appendChild(grotitle);
 function GetLabels(e) {
     for (let i = 0; i < e.feed.category.length; i++) {
